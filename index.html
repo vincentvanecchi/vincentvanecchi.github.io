@@ -44,7 +44,7 @@
             align-items: center;
         }
 
-        .profile img {
+        .pfp {
             border-radius: 50%;
             width: 100px;
             height: 100px;
@@ -78,7 +78,7 @@
             margin-right: 10px;
         }
 
-        .social-links a {
+        a {
             text-decoration: none;
             color: #8d448086;
             font-weight: bold;
@@ -93,9 +93,25 @@
             align-items: center;
         }
 
-        .social-links a:hover {
+        a:hover {
             color: #8d4480;
             border-color: #8d4480;
+        }
+
+        .kofi {
+            display: flex;
+            flex-direction: row;
+            border-width: 2px;
+            border-color: white;
+        }
+        
+        .kofi img {
+            width: 41px;
+            height: 32px;
+        }
+
+        .kofi span {
+            margin-left: -4px;
         }
     </style>
 </head>
@@ -103,7 +119,7 @@
     <div class="container">
         <img class="fireplace" src="./assets/fireplace.webp" width="500" height="375"/>
         <div class="profile">
-            <img src="./assets/pfp.jpg" alt="Profile Picture">
+            <img src="./assets/pfp.jpg" alt="Profile Picture" class="pfp">
             <h1>Vincent van Ecchi</h1>
             <p>Software Developer</p>
             <div class="social-links">
@@ -112,10 +128,12 @@
                 <a href="https://twitch.tv/newbject" target="_blank">Twitch</a>
                 <span>·</span>
                 <a href="https://youtube.com/@newbject" target="_blank">YouTube</a>
+                <span>·</span>
+                <a target="_blank" href="https://ko-fi.com/D1D7Y9G4Q" class="kofi">
+                    <img src="./assets/kofi_s_tag_white.png" alt="Ko-Fi"/>
+                    <span>Ko-Fi</span>
+                </a>
             </div>
-            <a target="_blank" href="https://ko-fi.com/D1D7Y9G4Q">
-                <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Ko-Fi" />
-            </a>
         </div>
     </div>
 </body>
