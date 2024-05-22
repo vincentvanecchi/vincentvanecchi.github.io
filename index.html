@@ -18,40 +18,21 @@
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
     <title>Newbject</title>
     <style>
-        @media only screen and (max-aspect-ratio: 1/1) {
-            .container {
-                width: 500px;
-                height: 700px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background: #ffffffc4;
-                padding: 14px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 14px;
-                border-style: solid;
-                border-width: 2px;
-                border-color: #ffffff3a;
-            }
+        .container {
+            width: 400px;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: #ffffffdc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 14px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #ffffff3a;
         }
-        @media only screen and (min-aspect-ratio: 1/1) {
-            .container {
-                width: 1000px;
-                height: 400px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                background: #ffffffc4;
-                padding-left: 14px;
-                padding-right: 14px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 14px;
-                border-style: solid;
-                border-width: 2px;
-                border-color: #ffffff3a;
-            }
-        }
-
+        
         body {
             font-family: Arial, Helvetica, monospace;
             margin: 0;
@@ -59,8 +40,9 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #98588d;
             color: #333;
+            background-image: url('./assets/fireplace.webp');
+            background-size: cover;
         }
 
 
@@ -71,7 +53,7 @@
         }
 
         .info {
-            width: 500px;
+            width: 400px;
             height: 300px;
             display: flex;
             flex-direction: column;
@@ -194,22 +176,7 @@
 </head>
 <body>
     <div class="container">
-        <img class="fireplace" src="./assets/fireplace.webp" width="500" height="375"/>
         <div class="info">
-            <!--
-            <div class="column_">
-                <div class="row_">
-                    <img src="./assets/stick.png" class="stick"/>
-                    <img src="./assets/actionbuttons.png" class="control"/>
-                </div>
-                
-                <div class="row_">
-                    <img src="./assets/krestovina.png" class="control"/>
-                    <img src="./assets/stick.png" class="stick"/>
-                </div>
-            </div> 
-            -->
-
             <div class="profile">
                 <img src="./assets/pfp.jpg" alt="Profile Picture" class="pfp">
                 <h1>Vincent van Ecchi</h1>
