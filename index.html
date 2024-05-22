@@ -18,6 +18,40 @@
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
     <title>Newbject</title>
     <style>
+        @media only screen and (max-aspect-ratio: 1/1) {
+            .container {
+                width: 500px;
+                height: 700px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #ffffffc4;
+                padding: 14px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 14px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #ffffff3a;
+            }
+        }
+        @media only screen and (min-aspect-ratio: 1/1) {
+            .container {
+                width: 1000px;
+                height: 400px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background: #ffffffc4;
+                padding-left: 14px;
+                padding-right: 14px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 14px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #ffffff3a;
+            }
+        }
+
         body {
             font-family: Arial, Helvetica, monospace;
             margin: 0;
@@ -25,40 +59,51 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #934f87f1;
+            background-color: #98588d;
             color: #333;
         }
 
-        .container {
-            width: 1000px;
-            height: 400px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background: #ffffffc4;
-            padding-left: 14px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
 
         .fireplace {
-            border-radius: 10px;
+            border-radius: 14px;
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
+        }
+
+        .info {
+            width: 500px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 14px;
         }
 
         .profile {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 500px;
             align-items: center;
+            margin-bottom: 10px;
+            
+            /*
+                border: #ffffff00;
+                border-bottom: #333;
+                border-radius: 50%;
+                border-style: dotted;
+                border-width: 2px;
+            */
         }
 
         .pfp {
+            display: block;
             border-radius: 50%;
             width: 100px;
             height: 100px;
+            border-color: #33333380;
+            border-width: 2px;
+            border-style: solid;
         }
 
         .profile h1 {
@@ -85,35 +130,37 @@
         }
 
         .social-links span {
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: 2px;
+            margin-right: 2px;
+            font-weight: 700;
+            font-size: 24px;
         }
 
         a {
-            text-decoration: none;
-            color: #8d448086;
-            font-weight: bold;
             transition: color 0.3s;
+            text-decoration: none;
+            font-weight: 400;
+            height: 20px;
             
-            border-width: 4px;
-            border-color: #8d448086;
-            border-radius: 4px;
-
             text-align: center;
             justify-content: center;
             align-items: center;
+            
+            padding: 4px;
+            font-size: 12px;
+            color: #333333a9;
+            border-color: #98588d00;
+            background-color: #dc91d000;
         }
 
         a:hover {
-            color: #8d4480;
-            border-color: #8d4480;
+            border-radius: 12px;
+            color: #333;
         }
 
         .kofi {
             display: flex;
             flex-direction: row;
-            border-width: 2px;
-            border-color: white;
         }
         
         .kofi img {
@@ -124,15 +171,51 @@
         .kofi span {
             margin-left: -4px;
         }
+
+        .row_ {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .column_ {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stick {
+
+        }
+
+        .control {
+            width: 64px;
+            height: 64px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img class="fireplace" src="./assets/fireplace.webp" width="500" height="375"/>
-        <div class="profile">
-            <img src="./assets/pfp.jpg" alt="Profile Picture" class="pfp">
-            <h1>Vincent van Ecchi</h1>
-            <p>Software Developer</p>
+        <div class="info">
+            <!--
+            <div class="column_">
+                <div class="row_">
+                    <img src="./assets/stick.png" class="stick"/>
+                    <img src="./assets/actionbuttons.png" class="control"/>
+                </div>
+                
+                <div class="row_">
+                    <img src="./assets/krestovina.png" class="control"/>
+                    <img src="./assets/stick.png" class="stick"/>
+                </div>
+            </div> 
+            -->
+
+            <div class="profile">
+                <img src="./assets/pfp.jpg" alt="Profile Picture" class="pfp">
+                <h1>Vincent van Ecchi</h1>
+                <p>Software Developer</p>
+            </div>
+            
             <div class="social-links">
                 <a href="https://twitch.tv/newbject" target="_blank">Twitch</a>
                 <span>·</span>
@@ -145,7 +228,7 @@
                 <span>·</span>
                 <a target="_blank" href="https://ko-fi.com/D1D7Y9G4Q" class="kofi">
                     <img src="./assets/kofi_s_tag_white.png" alt="Ko-Fi"/>
-                    <span>Ko-Fi</span>
+                    Ko-Fi
                 </a>
             </div>
         </div>
